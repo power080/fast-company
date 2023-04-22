@@ -1,9 +1,7 @@
-import React from 'react'
-import Quality from './Quality';
+import React from "react";
+import Quality from "./Quality";
 const QualityList = ({ qualities }) => {
-    return qualities.map((item) => (
-        <Quality key={item._id} {...item} />
-    ));
-}
+    return qualities.map((item) => <Quality key={item._id} {...item} />);
+};
 
-export default QualityList
+export default QualityList;
