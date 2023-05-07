@@ -19,9 +19,9 @@ const TableHeader = ({ onSort, selectedSort, columns }) => {
     return (
         <thead>
             <tr>
-                {Object.values(columns).map((column) => (
+                {Object.values(columns).map((column, index) => (
                     <th
-                        key={column.path}
+                        key={column.path ? column.path + column.name : index}
                         onClick={column.path ? () => handleSort(column.path) : undefined}
                         {...{ role: column.path && "button" }}
                         scope="col"
